@@ -35,16 +35,6 @@ class ViewController: NSViewController {
         
         var t = TransitionCompositionBuilder(clips: clips, transitionDuration: transitionDuration)
         if let comp = t?.buildComposition(renderSize) {
-            
-            // to show the composition live in the view
-            /*let item = comp.makePlayable()
-            let player = AVPlayer(playerItem: item)
-            let playerLayer = AVPlayerLayer(player: player)
-            playerLayer.frame = self.view.bounds
-            self.view.wantsLayer = true
-            self.view.layer?.addSublayer(playerLayer)
-            player.play()*/
-    
             if let tempURL = tempURLWithmp4Extension(), let session = comp.makeExportSession(preset: AVAssetExportPresetHighestQuality, outputURL: tempURL) {
                 session.exportAsynchronously {
                     switch session.status{
@@ -57,10 +47,9 @@ class ViewController: NSViewController {
                             break
                         default:
                             break
-                        }
                     }
+                }
             }
-            
         }
     }
 
