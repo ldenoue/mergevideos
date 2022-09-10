@@ -27,7 +27,7 @@ class ViewController: NSViewController {
         for videoName in videoNames {
             if let videoPath = Bundle.main.path(forResource: videoName, ofType:"mp4") {
                 let videoUrl = URL(fileURLWithPath: videoPath)
-                let timeRange = CMTimeRange(start: .zero, duration: CMTimeMakeWithSeconds(2.0, preferredTimescale: 1))
+                let timeRange = CMTimeRange(start: .zero, duration: CMTimeMakeWithSeconds(2.0, preferredTimescale: 600))
                 let clip = Clip(assetURL: videoUrl, timeRange: timeRange)
                 clips.append(clip)
             }
@@ -51,6 +51,9 @@ class ViewController: NSViewController {
                 }
             }
         }
+        
+        //let transitionTime = CMTimeMakeWithSeconds(transitionDuration, preferredTimescale: 600)
+        //print(transitionTime.seconds)
     }
 
     func tempURLWithmp4Extension() -> URL?{
