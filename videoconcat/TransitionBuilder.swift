@@ -147,8 +147,10 @@ struct TransitionCompositionBuilder {
             let timeRange = assetsTimeRanges[i]
 
             do {
+                // video track: insert the slice of the clip's timeRange at cursorTime
                 try currentVideoTrack.insertTimeRange(timeRange, of: assetVideoTrack, at: cursorTime)
                 if let assetAudioTrack = assetAudioTrack {
+                    // same for the audio track
                     try currentAudioTrack.insertTimeRange(timeRange, of: assetAudioTrack, at: cursorTime)
                 }
 

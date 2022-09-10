@@ -11,8 +11,6 @@
 		34A5E1A428CBAE38005E6029 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A5E1A328CBAE38005E6029 /* ViewController.swift */; };
 		34A5E1A628CBAE3C005E6029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34A5E1A528CBAE3C005E6029 /* Assets.xcassets */; };
 		34A5E1A928CBAE3C005E6029 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A5E1A728CBAE3C005E6029 /* Main.storyboard */; };
-		34A5E1B128CC8299005E6029 /* citizen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 34A5E1B028CC8299005E6029 /* citizen.mp4 */; };
-		34A5E1B328CC82AC005E6029 /* room.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 34A5E1B228CC82AC005E6029 /* room.mp4 */; };
 		34A5E1BB28CCD481005E6029 /* screegle1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 34A5E1BA28CCD481005E6029 /* screegle1.mp4 */; };
 		34A5E1BF28CCD77F005E6029 /* TransitionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A5E1BE28CCD77F005E6029 /* TransitionBuilder.swift */; };
 		34A5E1C328CCD91A005E6029 /* screegle0.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 34A5E1C228CCD91A005E6029 /* screegle0.mp4 */; };
@@ -26,8 +24,6 @@
 		34A5E1A528CBAE3C005E6029 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34A5E1A828CBAE3C005E6029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34A5E1AA28CBAE3C005E6029 /* videoconcat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = videoconcat.entitlements; sourceTree = "<group>"; };
-		34A5E1B028CC8299005E6029 /* citizen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = citizen.mp4; sourceTree = "<group>"; };
-		34A5E1B228CC82AC005E6029 /* room.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = room.mp4; sourceTree = "<group>"; };
 		34A5E1BA28CCD481005E6029 /* screegle1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = screegle1.mp4; sourceTree = "<group>"; };
 		34A5E1BE28CCD77F005E6029 /* TransitionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionBuilder.swift; sourceTree = "<group>"; };
 		34A5E1C228CCD91A005E6029 /* screegle0.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = screegle0.mp4; sourceTree = "<group>"; };
@@ -70,8 +66,6 @@
 				34A5E1A528CBAE3C005E6029 /* Assets.xcassets */,
 				34A5E1A728CBAE3C005E6029 /* Main.storyboard */,
 				34A5E1AA28CBAE3C005E6029 /* videoconcat.entitlements */,
-				34A5E1B028CC8299005E6029 /* citizen.mp4 */,
-				34A5E1B228CC82AC005E6029 /* room.mp4 */,
 				34A5E1C228CCD91A005E6029 /* screegle0.mp4 */,
 				34A5E1BA28CCD481005E6029 /* screegle1.mp4 */,
 				34A5E1C428CCD965005E6029 /* screegle2.mp4 */,
@@ -137,12 +131,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34A5E1B328CC82AC005E6029 /* room.mp4 in Resources */,
 				34A5E1A628CBAE3C005E6029 /* Assets.xcassets in Resources */,
 				34A5E1C528CCD965005E6029 /* screegle2.mp4 in Resources */,
 				34A5E1A928CBAE3C005E6029 /* Main.storyboard in Resources */,
 				34A5E1C328CCD91A005E6029 /* screegle0.mp4 in Resources */,
-				34A5E1B128CC8299005E6029 /* citizen.mp4 in Resources */,
 				34A5E1BB28CCD481005E6029 /* screegle1.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
