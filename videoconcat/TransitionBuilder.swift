@@ -43,6 +43,14 @@ struct TransitionCompositionBuilder {
 
     private var compositionVideoTracks = [AVMutableCompositionTrack]()
 
+    static func clipTime(_ timeRange: CMTimeRange, assetDuration: CMTime) -> CMTimeRange {
+        if timeRange.end > assetDuration {
+            print("end > asset duration!")
+            return CMTimeRange(start: CMTimeSubtract(assetDuration, timeRange.duration), duration: timeRange.duration)
+        } else {
+            return timeRange
+        }
+    }
     init?(clips: [Clip], transitionDuration: Float64 = 0.3) {
 
         guard !clips.isEmpty else { return nil }
@@ -53,8 +61,8 @@ struct TransitionCompositionBuilder {
             let asset = AVAsset(url: clip.assetURL)
             self.assets.append(asset)
             
-            // clamping the given timeRange to the asset's duration
-            let timeRange = clip.timeRange.duration <= asset.duration ? clip.timeRange : CMTimeRange(start: .zero, duration: asset.duration)
+            // clipping the given timeRange to fit within the asset's duration
+            let timeRange = TransitionCompositionBuilder.clipTime(clip.timeRange, assetDuration: asset.duration)
             self.timeRanges.append(timeRange)
         }
         self.transitionDuration = CMTimeMakeWithSeconds(transitionDuration, preferredTimescale: 600)
